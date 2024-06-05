@@ -13,7 +13,7 @@ function Home() {
 
     const getNotes = async (token) => {
         console.log("Fetching notes");
-        const res = await axios.get('${process.env.BASEURL}/api/notes/getnotes', {
+        const res = await axios.get(`${process.env.BASEURL}/api/notes/getnotes`, {
             headers: { Authorization: token }
         });
         setNotes(res.data);

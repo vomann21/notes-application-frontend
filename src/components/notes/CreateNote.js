@@ -22,7 +22,7 @@ function CreateNote()
             }
 
             console.log(newNote)
-            const res=await axios.post('${process.env.BASEURL}/api/notes/createnotes',newNote,{
+            const res=await axios.post(`${process.env.BASEURL}/api/notes/createnotes`,newNote,{
                 headers:{Authorization:token}
             })
             console.log(res)

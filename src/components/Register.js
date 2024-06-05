@@ -10,10 +10,9 @@ function Register(props)
     const [err,setErr] = useState('')
     const {register,handleSubmit,formState:{errors}}=useForm();
     const onSubmit = async(data)=>{
-       try{
-         
+       try{ 
          const {username,email,password}=data 
-         const res = await axios.post('${process.env.BASEURL}/user/register',{
+         const res = await axios.post(`${process.env.BASEURL}/user/register`,{
              username:username,
              email:email,
              password:password

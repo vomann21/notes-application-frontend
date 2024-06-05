@@ -14,7 +14,7 @@ function Login(props)
         {
             setErr("")
             const {email,password}=data;
-            const res = await axios.post('${process.env.BASEURL}/user/login',{
+            const res = await axios.post(`${process.env.BASEURL}/user/login`,{
                  email:email,
                  password:password
             })
